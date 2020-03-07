@@ -58,10 +58,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ```zsh
 plugins=(
-    fzf
-    zsh-snippets
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+  fzf
+  zsh-snippets
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 ```
 
@@ -75,4 +75,6 @@ plugins=(
    2. `ENABLE_CORRECTION="true"`
 
 2. User configuration
-   1. HISTFILE=~/.dotfiles/.zsh_history
+   - source ~/.dotfiles/zsh_snippets.zsh
+   - setopt HIST_IGNORE_ALL_DUPS
+   - HISTFILE=~/.dotfiles/.zsh_history

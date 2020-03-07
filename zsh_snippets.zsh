@@ -1,21 +1,23 @@
 #-------------Git-------------
 snippet "gs" "git status"
-just_expansion "gca" "git commit -am '^'"
+expansion "gca" "git commit -am '^'"
+als "gaa" "git add -A"
+als "gdp" "git --no-pager diff"
 
 #-------------Misc-------------
 snippet "syu" "sudo pacman -Syu"
 
-just_alias "path" "print -l $path"
+als "path" 'print -l $path'
 
-just_alias "edzsh" "code ~/.dotfiles"
+als "edzsh" "code ~/.dotfiles"
 
-just_alias "ls" "ls -F --color"
-just_alias "la" "ls -AF --color"
+als "ls" "ls -F --color"
+als "la" "ls -AF --color"
 
 #-------------Safety-------------
-just_alias "rm" "rm -I --preserve-root"
-just_alias "cp" "cp -i"
-just_alias "mv" "mv -i"
-just_alias "chown" "chown --preserve-root"
-just_alias "chmod" "chmod --preserve-root"
-just_alias "chgrp" "chgrp --preserve-root"
+als "rm" "rm -I --preserve-root"
+als "cp" "cp -i"
+als "mv" "mv -i"
+als "chown" "chown --preserve-root"
+als "chmod" "chmod --preserve-root"
+als "chgrp" "chgrp --preserve-root"
