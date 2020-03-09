@@ -36,36 +36,45 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 #### Install the following plugins by cloning their repositories:
 
-1.  Zsh-autosuggestions
+1. Autoupdate
 
-    ```sh
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    ```
+   ```zsh
+    git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoupdate
+   ```
 
-2.  Zsh-syntax-highlighting
+2. Fast-syntax-highlighting
 
-    ```zsh
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    ```
+   ```zsh
+   git clone https://github.com/zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+   ```
 
-3.  Zsh-snippets
+3. Zsh-autosuggestions
 
-    ```sh
-    git clone https://github.com/IlanCosman/zsh-snippets ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-snippets
-    ```
+   ```sh
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   ```
+
+4. Zsh-snippets
+
+   ```zsh
+   git clone https://github.com/IlanCosman/zsh-snippets ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-snippets
+   ```
 
 #### Add the plugins to Zshrc
 
 ```zsh
 plugins=(
   fzf
+  autoupdate
   zsh-snippets
   zsh-autosuggestions
-  zsh-syntax-highlighting
+  
+  # Must come last
+  fast-syntax-highlighting
 )
 ```
 
-- zsh-syntax-highlighting must come last
+- fast-syntax-highlighting must come last
 
 ### Zshrc Modifications
 
