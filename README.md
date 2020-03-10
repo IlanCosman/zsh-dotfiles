@@ -79,22 +79,22 @@ plugins=(
 
 2. User configuration
 
-   - source ~/.dotfiles/zsh_snippets.zsh
+   - source ~/.config/zsh/zsh_snippets.zsh
    - setopt HIST_IGNORE_ALL_DUPS
-   - HISTFILE=~/.dotfiles/.zsh_history
+   - HISTFILE=~/.config/zsh/.zsh_history
 
-## Dotfiles folder
+## Prepare .config/zsh folder
 
-1. Clone this repository into the home folder with the name .dotfiles
+1. Clone this repository into the ~/.config/zsh folder
 
    ```sh
-   git clone https://github.com/IlanCosman/dotfiles ~/.dotfiles
+   git clone https://github.com/IlanCosman/dotfiles ~/.config/zsh
    ```
 
-2. Run the following commands to move zshrc into the dotfiles folder:
+2. Run the following commands to move zshrc into the ~/.config/zsh folder:
 
    ```sh
-   mv ~/.zshrc ~/.dotfiles/zshrc.zsh
+   mv ~/.zshrc ~/.config/zsh/zshrc.zsh
 
-   echo "source ~/.dotfiles/zshrc.zsh" > ~/.zshrc
+   echo "source ~/.config/zsh/zshrc.zsh" > ~/.zshrc
    ```
