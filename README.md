@@ -1,16 +1,16 @@
-# Dotfiles
-
-## Installation
+# Installation
 
 Install Zsh through your package manager.
 
-### Oh My Zsh
+## Oh My Zsh
 
-```zsh
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Powerlevel10k
+- Select Yes when asked to make zsh your default prompt. Restart afterwards to finalize.
+
+## Powerlevel10k
 
 1. Install the recommended fonts.
 
@@ -21,62 +21,56 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 2. Install Powerlevel10k for Oh My Zsh.
 
-   ```zsh
+   ```sh
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
    ```
 
    Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in zshrc.
 
 3. Prompt configuration
+
    - All of the symbols should appear if you've installed the recommended fonts.
    - Select the following:
-     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Light, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
+     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Disconnected, No frame, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
 
-### Oh My Zsh Plugins
+4. Comment out all right hand prompt elements in .p10k.zsh in accordance with [Powerlevel10k's reccomendation](https://github.com/romkatv/powerlevel10k/blob/master/README.md#horrific-mess-when-resizing-terminal-window) for dealing with the zsh window resizing bug.
 
-#### Install the following plugins by cloning their repositories:
+## Oh My Zsh Plugins
 
-1. Autoupdate
+### Install the following plugins by cloning their repositories:
 
-   ```zsh
-    git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoupdate
-   ```
+1. Fast-syntax-highlighting
 
-2. Fast-syntax-highlighting
-
-   ```zsh
+   ```sh
    git clone https://github.com/zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
    ```
 
-3. Zsh-autosuggestions
+2. Zsh-autosuggestions
 
    ```sh
    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
    ```
 
-4. Zsh-snippets
+3. Zsh-snippets
 
-   ```zsh
+   ```sh
    git clone https://github.com/IlanCosman/zsh-snippets ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-snippets
    ```
 
-#### Add the plugins to Zshrc
+### Add the plugins to Zshrc
 
-```zsh
+```sh
 plugins=(
   fzf
-  autoupdate
   zsh-snippets
   zsh-autosuggestions
-  
+
   # Must come last
   fast-syntax-highlighting
 )
 ```
 
-- fast-syntax-highlighting must come last
-
-### Zshrc Modifications
+## Zshrc Modifications
 
 1. Uncomment the following settings in zshrc:
 
@@ -84,6 +78,23 @@ plugins=(
    2. `ENABLE_CORRECTION="true"`
 
 2. User configuration
+
    - source ~/.dotfiles/zsh_snippets.zsh
    - setopt HIST_IGNORE_ALL_DUPS
    - HISTFILE=~/.dotfiles/.zsh_history
+
+## Dotfiles folder
+
+1. Clone this repository into the home folder with the name .dotfiles
+
+   ```sh
+   git clone https://github.com/IlanCosman/dotfiles ~/.dotfiles
+   ```
+
+2. Run the following commands to move zshrc into the dotfiles folder:
+
+   ```sh
+   mv ~/.zshrc ~/.dotfiles/zshrc.zsh
+
+   echo "source ~/.dotfiles/zshrc.zsh" > ~/.zshrc
+   ```
