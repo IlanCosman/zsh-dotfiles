@@ -79,9 +79,10 @@ plugins=(
 
 2. User configuration
 
-   - source ~/.config/zsh/zsh_snippets.zsh
+   - source ~/.config/zsh/aliases.zsh
    - setopt HIST_IGNORE_ALL_DUPS
    - HISTFILE=~/.config/zsh/.zsh_history
+   - bindkey "^Q" kill-whole-line
 
 ## Prepare .config/zsh folder
 
@@ -96,5 +97,5 @@ plugins=(
    ```sh
    mv ~/.zshrc ~/.config/zsh/zshrc.zsh
 
-   echo "source ~/.config/zsh/zshrc.zsh" > ~/.zshrc
+   echo "export ZDOTDIR=~/.config/zsh" > ~/.zshenv
    ```

@@ -1,6 +1,7 @@
 #-------------Misc-------------
 als "path" 'print -l $path'
 als "edzsh" "code ~/.config/zsh"
+expansion "s" "sudo"
 snippet "syu" "sudo pacman -Syu"
 
 #-------------Git-------------
