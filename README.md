@@ -1,6 +1,18 @@
 # Installation
 
-Install Zsh through your package manager.
+## Prepare .config/zsh folder
+
+1. Set ~/.config/zsh as your zsh home folder.
+
+   ```sh
+   echo "export ZDOTDIR=~/.config/zsh" > ~/.zshenv
+   ```
+
+2. Clone this repository into the ~/.config/zsh folder.
+
+   ```sh
+   git clone https://github.com/IlanCosman/dotfiles ~/.config/zsh
+   ```
 
 ## Oh My Zsh
 
@@ -31,9 +43,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
    - All of the symbols should appear if you've installed the recommended fonts.
    - Select the following:
-     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Disconnected, No frame, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
-
-4. Comment out all right hand prompt elements in .p10k.zsh in accordance with [Powerlevel10k's reccomendation](https://github.com/romkatv/powerlevel10k/blob/master/README.md#horrific-mess-when-resizing-terminal-window) for dealing with the zsh window resizing bug.
+     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Darkest, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
 
 ## Oh My Zsh Plugins
 
@@ -42,19 +52,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 1. Fast-syntax-highlighting
 
    ```sh
-   git clone https://github.com/zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+   git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/fast-syntax-highlighting
    ```
 
 2. Zsh-autosuggestions
 
    ```sh
-   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
    ```
 
 3. Zsh-snippets
 
    ```sh
-   git clone https://github.com/IlanCosman/zsh-snippets ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-snippets
+   git clone https://github.com/IlanCosman/zsh-snippets $ZSH_CUSTOM/plugins/zsh-snippets
    ```
 
 ### Add the plugins to Zshrc
@@ -83,19 +93,3 @@ plugins=(
    - setopt HIST_IGNORE_ALL_DUPS
    - HISTFILE=~/.config/zsh/.zsh_history
    - bindkey "^Q" kill-whole-line
-
-## Prepare .config/zsh folder
-
-1. Clone this repository into the ~/.config/zsh folder
-
-   ```sh
-   git clone https://github.com/IlanCosman/dotfiles ~/.config/zsh
-   ```
-
-2. Run the following commands to move zshrc into the ~/.config/zsh folder:
-
-   ```sh
-   mv ~/.zshrc ~/.config/zsh/zshrc.zsh
-
-   echo "export ZDOTDIR=~/.config/zsh" > ~/.zshenv
-   ```
