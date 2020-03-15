@@ -43,7 +43,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
    - All of the symbols should appear if you've installed the recommended fonts.
    - Select the following:
-     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Darkest, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
+     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Dark, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
 
 ## Oh My Zsh Plugins
 
@@ -61,10 +61,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
    ```
 
-3. Zsh-snippets
+3. Zsh-abbr
 
    ```sh
-   git clone https://github.com/IlanCosman/zsh-snippets $ZSH_CUSTOM/plugins/zsh-snippets
+   git clone https://github.com/IlanCosman/zsh-abbr $ZSH_CUSTOM/plugins/zsh-abbr
    ```
 
 ### Add the plugins to Zshrc
@@ -72,7 +72,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```sh
 plugins=(
   fzf
-  zsh-snippets
+  zsh-abbr
   zsh-autosuggestions
 
   # Must come last
@@ -93,3 +93,4 @@ plugins=(
    - setopt HIST_IGNORE_ALL_DUPS
    - HISTFILE=~/.config/zsh/.zsh_history
    - bindkey "^Q" kill-whole-line
+   - bindkey "^S" undefined-key

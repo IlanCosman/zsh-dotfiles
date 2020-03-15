@@ -1,23 +1,23 @@
 #-------------Misc-------------
-als "path" 'print -l $path'
-als "edzsh" "code ~/.config/zsh"
-expansion "s" "sudo"
-snippet "syu" "sudo pacman -Syu"
+alias path='print -l $path'
+alias edzsh="code ~/.config/zsh"
+abbr s="sudo ^"
+abbr syu="sudo pacman -Syu"
 
 #-------------Git-------------
-als "gaa" "git add -A"
-als "gdp" "git --no-pager diff"
-expansion "gca" "git commit -am '^'"
-snippet "gs" "git status"
+alias gaa="git add -A"
+alias gdp="git --no-pager diff"
+abbr gca="git commit -am '^'"
+abbr gs="git status"
 
 #-----------Generic-----------
-als "ls" "ls -F --color"
-als "la" "ls -AF --color"
+alias ls="ls -F --color"
+alias la="ls -AF --color"
 
 #------------Safety------------
-als "rm" "rm -I --preserve-root"
-als "cp" "cp -i"
-als "mv" "mv -i"
-als "chown" "chown --preserve-root"
-als "chmod" "chmod --preserve-root"
-als "chgrp" "chgrp --preserve-root"
+alias rm="rm -I --preserve-root"
+alias cp="cp -i"
+alias mv="mv -i"
+alias chown="chown --preserve-root"
+alias chmod="chmod --preserve-root"
+alias chgrp="chgrp --preserve-root"
