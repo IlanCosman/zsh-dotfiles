@@ -11,7 +11,7 @@
 2. Clone this repository into the ~/.config/zsh folder.
 
    ```sh
-   git clone https://github.com/IlanCosman/dotfiles ~/.config/zsh
+   git clone https://github.com/IlanCosman/zsh-dotfiles ~/.config/zsh
    ```
 
 ## Oh My Zsh

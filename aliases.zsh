@@ -1,7 +1,7 @@
 #-------------Misc-------------
 alias path='print -l $path'
 alias edzsh="code ~/.config/zsh"
-abbr s="sudo"
+abbr s="sudo ^"
 abbr syu="sudo pacman -Syu"
 
 #-------------Git-------------
