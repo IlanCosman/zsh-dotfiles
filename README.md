@@ -1,5 +1,19 @@
 # Installation
 
+## Packages
+
+1. Install [fzf](https://github.com/junegunn/fzf) and [lsd](https://github.com/Peltoche/lsd).
+
+   ```sh
+   sudo pacman -Syu fzf lsd
+   ```
+
+2. Install nerd font symbols for lsd and [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+
+   ```sh
+   sudo pacman -Syu ttf-nerd-fonts-symbols
+   ```
+
 ## Prepare .config/zsh folder
 
 1. Set ~/.config/zsh as your zsh home folder.
@@ -24,14 +38,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Powerlevel10k
 
-1. Install the recommended fonts.
-
-   - [MesloLGS NF Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
-   - [MesloLGS NF Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
-   - [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
-   - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
-
-2. Install Powerlevel10k for Oh My Zsh.
+1. Install Powerlevel10k for Oh My Zsh.
 
    ```sh
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -39,7 +46,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
    Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in zshrc.
 
-3. Prompt configuration
+2. Prompt configuration
 
    - All of the symbols should appear if you've installed the recommended fonts.
    - Select the following:
@@ -49,10 +56,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Install the following plugins by cloning their repositories:
 
-1. Fast-syntax-highlighting
+1. Zsh-abbr
 
    ```sh
-   git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+   git clone https://github.com/IlanCosman/zsh-abbr $ZSH_CUSTOM/plugins/zsh-abbr
    ```
 
 2. Zsh-autosuggestions
@@ -61,10 +68,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
    ```
 
-3. Zsh-abbr
+3. Fast-syntax-highlighting
 
    ```sh
-   git clone https://github.com/IlanCosman/zsh-abbr $ZSH_CUSTOM/plugins/zsh-abbr
+   git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/fast-syntax-highlighting
    ```
 
 ### Add the plugins to Zshrc
