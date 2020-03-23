@@ -96,7 +96,7 @@ plugins=(
 
 2. User configuration
 
-   - source ~/.config/zsh/aliases.zsh
+   - source ~/.config/zsh/abbrs.zsh
    - HISTFILE=~/.config/zsh/.zsh_history
    - bindkey "^Q" kill-whole-line
    - bindkey "^S" undefined-key
