@@ -18,11 +18,6 @@ abbr gs="git status"
 #-----------Aliases-----------
 alias ls="lsd"
 alias la="lsd -A"
-
-#--------Safety--------
-alias rm="rm -I --preserve-root"
+alias rm="rm -I"
 alias cp="cp -i"
 alias mv="mv -i"
-alias chown="chown --preserve-root"
-alias chmod="chmod --preserve-root"
-alias chgrp="chgrp --preserve-root"
