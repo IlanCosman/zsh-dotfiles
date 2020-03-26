@@ -30,31 +30,17 @@
 
 ## Oh My Zsh
 
+### Install Oh My Zsh
+
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 - Select Yes when asked to make zsh your default prompt. Restart afterwards to finalize.
 
-## Powerlevel10k
+### Oh My Zsh Plugins
 
-1. Install Powerlevel10k for Oh My Zsh.
-
-   ```sh
-   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-   ```
-
-   Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in zshrc.
-
-2. Prompt configuration
-
-   - All of the symbols should appear if you've installed the recommended fonts.
-   - Select the following:
-     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Dark, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
-
-## Oh My Zsh Plugins
-
-### Install the following plugins by cloning their repositories:
+#### Install the following plugins by cloning their repositories:
 
 1. Zsh-abbr
 
@@ -74,7 +60,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
    git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/fast-syntax-highlighting
    ```
 
-### Add the plugins to Zshrc
+#### Add the plugins to Zshrc
 
 ```sh
 plugins=(
@@ -100,3 +86,31 @@ plugins=(
    - HISTFILE=~/.config/zsh/.zsh_history
    - bindkey "^Q" kill-whole-line
    - bindkey "^S" undefined-key
+
+## Appearance
+
+### Powerlevel10K
+
+1. Install Powerlevel10k for Oh My Zsh.
+
+   ```sh
+   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+   ```
+
+   Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in zshrc.
+
+2. Prompt configuration
+
+   - All of the symbols should appear if you've installed the recommended fonts.
+   - Select the following:
+     - Lean, Unicode, 256 colors, No (Show current time?), Two lines, Dotted, No frame, Dark, Sparse, Few icons, Concise, No (Enable transient prompt?), Verbose
+
+### Gogh theme
+
+1. Install Paul Millr's color theme from Gogh.
+
+   ```sh
+   bash -c  "$(wget -qO- https://git.io/vQgMr)"
+   ```
+
+   - Pick theme number `130`
